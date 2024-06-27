@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AppData_v3.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="State" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="V_String" />
+            <Field name="county" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="V_String" />
+            <Field name="Specialities" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="V_String" />
+            <Field name="avg_medicare_new_patient" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="Double" />
+            <Field name="avg_copay_new_patient" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="Double" />
+            <Field name="mode_medicare_new_patient" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="Double" />
+            <Field name="mode_copay_new_patient" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="Double" />
+            <Field name="avg_medicare_established_patient" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="Double" />
+            <Field name="avg_copay_established_patient" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="Double" />
+            <Field name="mode_copay_established_patient" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="Double" />
+            <Field name="mode_medicare_established_patient" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\AppData_v3.xlsx|||Sheet1" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="114" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="State" action="GroupBy" rename="State" />
+            <SummarizeField field="avg_medicare_new_patient" action="Avg" rename="Avg_avg_medicare_new_patient" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="222" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Specialities" action="GroupBy" rename="Specialities" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.GenerateRows.GenerateRows">
+        <Position x="210" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>RowCopy</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>254</CreateField_Size>
+          <Expression_Init>1</Expression_Init>
+          <Expression_Cond>RowCopy &lt;= 2</Expression_Cond>
+          <Expression_Loop>RowCopy + 1</Expression_Loop>
+          <RecordCount value="426660" />
+          <RecordCount value="420096" />
+          <RecordCount value="420096" />
+          <RecordCount value="420096" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxGenerateRows" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="342" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF RowCopy = 1 THEN &quot;New Patient&quot; ELSE &quot;Established Patient&quot; ENDIF" field="Patient Type" size="1073741823" type="V_WString" />
+            <FormulaField expression="If [Patient Type] = &quot;Established Patient&quot; Then [avg_medicare_established_patient] Else [avg_medicare_new_patient] ENDIF" field="Average Medicare" size="8" type="Double" />
+            <FormulaField expression="If [Patient Type] = &quot;Established Patient&quot; Then [avg_copay_established_patient] Else [avg_copay_new_patient] ENDIF" field="Average Copay" size="8" type="Double" />
+            <FormulaField expression=" If [Patient Type] = &quot;Established Patient&quot; Then [mode_medicare_established_patient] Else [mode_medicare_new_patient] ENDIF" field="Mode Medicare" size="8" type="Double" />
+            <FormulaField expression="If [Patient Type] = &quot;Established Patient&quot; Then [mode_copay_established_patient] Else [mode_copay_new_patient] ENDIF" field="Mode Copay" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Patient Type = IF RowCopy = 1 THEN "New Patient" ELSE "Established Patient" ENDI...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="570" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="RowCopy" action="GroupBy" rename="RowCopy" />
+            <SummarizeField field="Patient Type" action="GroupBy" rename="Patient Type" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="462" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="State" selected="True" />
+            <SelectField field="county" selected="True" />
+            <SelectField field="Specialities" selected="True" />
+            <SelectField field="Patient Type" selected="True" />
+            <SelectField field="Average Medicare" selected="True" />
+            <SelectField field="Avg Copay" selected="True" />
+            <SelectField field="Mode Medicare" selected="True" />
+            <SelectField field="Average Copay" selected="True" />
+            <SelectField field="Mode Copay" selected="True" />
+            <SelectField field="avg_medicare_new_patient" selected="False" />
+            <SelectField field="avg_copay_new_patient" selected="False" />
+            <SelectField field="mode_medicare_new_patient" selected="False" />
+            <SelectField field="mode_copay_new_patient" selected="False" />
+            <SelectField field="avg_medicare_established_patient" selected="False" />
+            <SelectField field="avg_copay_established_patient" selected="False" />
+            <SelectField field="mode_copay_established_patient" selected="False" />
+            <SelectField field="mode_medicare_established_patient" selected="False" />
+            <SelectField field="RowCopy" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="797" y="89" width="152" height="293" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 11</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="822" y="138" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="25">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\Output\State-wise_data.xlsx|||Sheet1</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <PreserveFormat>False</PreserveFormat>
+                <SkipFieldNames>False</SkipFieldNames>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="True" />
+              <MultiFileType>FileName</MultiFileType>
+              <MultiFileField>State</MultiFileField>
+              <KeepField value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>State-wise_data.xlsx
+Query=Sheet1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="822" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\Output\CostData.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>|</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>CostData.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>02_App_Data_Transformation</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="c222fc11-fa80-447d-9f41-cc9cdbd9f23b" />
+      <Telemetry>
+        <PreviousWorkflowId value="3b6ff65c-f16c-44d5-8a79-f8458ba09bf0" />
+        <OriginWorkflowId value="3b6ff65c-f16c-44d5-8a79-f8458ba09bf0" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>zip_code_database.xlsx
+Query=`data$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="zip" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="Double" />
+            <Field name="type" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="decommissioned" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="Double" />
+            <Field name="primary_city" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="acceptable_cities" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="unacceptable_cities" size="1024" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="state" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="county" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="timezone" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="area_codes" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="world_region" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="country" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="V_String" />
+            <Field name="latitude" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="Double" />
+            <Field name="longitude" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="Double" />
+            <Field name="irs_estimated_population" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`data$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="162" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Right(&quot;000000&quot;+ToString([zip]), 5)" field="zip_updated" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[zip_updated = Right("000000"+ToString([zip]), 5)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="510" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="zip_code" action="GroupBy" rename="zip_code" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="414" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ROUND((tonumber([min_medicare_pricing_for_new_patient])+tonumber([max_medicare_pricing_for_new_patient]))/2,2)" field="avg_medicare_new_patient" size="19.0" type="FixedDecimal" />
+            <FormulaField expression="ROUND((tonumber([min_copay_for_new_patient])+tonumber([max_copay_for_new_patient]))/2,2)" field="avg_copay_new_patient" size="19.0" type="FixedDecimal" />
+            <FormulaField expression="ROUND(tonumber([mode_medicare_pricing_for_new_patient]),2)" field="mode_medicare_new_patient" size="19.0" type="FixedDecimal" />
+            <FormulaField expression="ROUND(tonumber([mode_copay_for_new_patient]),2)" field="mode_copay_new_patient" size="19.0" type="FixedDecimal" />
+            <FormulaField expression="ROUND((tonumber([min_medicare_pricing_for_established_patient])+tonumber([max_medicare_pricing_for_established_patient]))/2,2)" field="avg_medicare_established_patient" size="19.0" type="FixedDecimal" />
+            <FormulaField expression="ROUND((tonumber([min_copay_for_established_patient])+tonumber([max_copay_for_established_patient]))/2,2)" field="avg_copay_established_patient" size="19.0" type="FixedDecimal" />
+            <FormulaField expression="ROUND(tonumber([mode_copay_for_established_patient]),2)" field="mode_copay_established_patient" size="19.0" type="FixedDecimal" />
+            <FormulaField expression="ROUND(tonumber([mode_medicare_pricing_for_established_patient]),2)" field="mode_medicare_established_patient" size="19.0" type="FixedDecimal" />
+            <FormulaField expression="TRIM(Replace([county], &quot;County&quot;, &quot;&quot;))" field="county" size="255" type="V_String" />
+            <FormulaField expression="Titlecase(TRIM(Replace([Specialities], &quot;_&quot;, &quot; &quot;)))&#xA;" field="Specialities" size="254" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>avg_medicare_new_patient = ROUND((tonumber([min_medicare_pricing_for_new_patient...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="798" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="state" action="GroupBy" rename="state" />
+            <SummarizeField field="county" action="GroupBy" rename="county" />
+            <SummarizeField field="Specialities" action="GroupBy" rename="Specialities" />
+            <SummarizeField field="avg_medicare_new_patient" action="Avg" rename="avg_medicare_new_patient" />
+            <SummarizeField field="avg_copay_new_patient" action="Avg" rename="avg_copay_new_patient" />
+            <SummarizeField field="mode_medicare_new_patient" action="Avg" rename="mode_medicare_new_patient" />
+            <SummarizeField field="mode_copay_new_patient" action="Avg" rename="mode_copay_new_patient" />
+            <SummarizeField field="avg_medicare_established_patient" action="Avg" rename="avg_medicare_established_patient" />
+            <SummarizeField field="avg_copay_established_patient" action="Avg" rename="avg_copay_established_patient" />
+            <SummarizeField field="mode_copay_established_patient" action="Avg" rename="mode_copay_established_patient" />
+            <SummarizeField field="mode_medicare_established_patient" action="Avg" rename="mode_medicare_established_patient" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1086" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\Physician_office_visit_costs_v3.xlsx|||Sheet1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>RemoveFile</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Physician_office_visit_costs_v3.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="510" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="min_medicare_pricing_for_new_patient" selected="False" />
+            <SelectField field="max_medicare_pricing_for_new_patient" selected="False" />
+            <SelectField field="mode_medicare_pricing_for_new_patient" selected="False" />
+            <SelectField field="min_copay_for_new_patient" selected="False" />
+            <SelectField field="max_copay_for_new_patient" selected="False" />
+            <SelectField field="mode_copay_for_new_patient" selected="False" />
+            <SelectField field="min_medicare_pricing_for_established_patient" selected="False" />
+            <SelectField field="max_medicare_pricing_for_established_patient" selected="False" />
+            <SelectField field="min_copay_for_established_patient" selected="False" />
+            <SelectField field="max_copay_for_established_patient" selected="False" />
+            <SelectField field="mode_copay_for_established_patient" selected="False" />
+            <SelectField field="zip" selected="False" />
+            <SelectField field="type" selected="False" />
+            <SelectField field="decommissioned" selected="False" />
+            <SelectField field="unacceptable_cities" selected="False" />
+            <SelectField field="timezone" selected="False" />
+            <SelectField field="area_codes" selected="False" />
+            <SelectField field="world_region" selected="False" />
+            <SelectField field="country" selected="False" />
+            <SelectField field="irs_estimated_population" selected="False" />
+            <SelectField field="zip_updated" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="606" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>county</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-04-14 13:27:35</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2024-04-14 13:27:35</StartDate>
+              <EndDate>2024-04-14 13:27:35</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([county])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="702" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Specialities] NOT IN ("Diagnostic Radiology", "Pathology", "Dentist", "Anesthesiology", "Certified Registered Nurse Anesthetist (CRNA)", "Maxillofacial Surgery", "Interventional Radiology", "Optometry", "Nuclear Medicine", "Mammography Center", "Radiation Oncology", "Physical Therapist in Private Practice", "Licensed Clinical Social Worker", "Podiatry", "Clinical Laboratory", "Psychologist Clinical", "Public Health or Welfare Agency", "Registered Dietitian or Nutrition Professional", "Oral Surgery (Dentist Only)", "Undefined Physician Type", "Unknown Supplier/Provider Specialty", "Speech Language Pathologist")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Specialities] NOT IN ("Diagnostic Radiology", "Pathology", "Dentist", "Anesthes...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="894" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>state</FieldFind>
+          <FieldSearch>Abbreviation</FieldSearch>
+          <ReplaceFoundField>State/Possession</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="False" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Append</ReplaceMode>
+          <ReplaceMultipleFound value="True" />
+          <ReplaceAppendFields>
+            <Field field="State/Possession" />
+          </ReplaceAppendFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="810" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`state_mapping$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>zip_code_database.xlsx
+Query=`state_mapping$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Abbreviation" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`state_mapping$`" type="V_String" />
+            <Field name="State/Possession" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\zip\zip_code_database.xlsx|||`state_mapping$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="990" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="State/Possession" selected="True" rename="State" />
+            <SelectField field="state" selected="True" rename="State Code" />
+            <SelectField field="county" selected="True" />
+            <SelectField field="Specialities" selected="True" />
+            <SelectField field="avg_medicare_new_patient" selected="True" />
+            <SelectField field="avg_copay_new_patient" selected="True" />
+            <SelectField field="mode_medicare_new_patient" selected="True" />
+            <SelectField field="mode_copay_new_patient" selected="True" />
+            <SelectField field="avg_medicare_established_patient" selected="True" />
+            <SelectField field="avg_copay_established_patient" selected="True" />
+            <SelectField field="mode_copay_established_patient" selected="True" />
+            <SelectField field="mode_medicare_established_patient" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\PhyVisitCost_files_merged.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>PhyVisitCost_files_merged.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="zip_code" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="min_medicare_pricing_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="max_medicare_pricing_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="mode_medicare_pricing_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="min_copay_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="max_copay_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="mode_copay_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="most_utilized_procedure_code_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="min_medicare_pricing_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="max_medicare_pricing_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="mode_medicare_pricing_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="min_copay_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="max_copay_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="mode_copay_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="most_utilized_procedure_code_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\01_Raw\Physician_visit_costs\Addiction_Medicine.csv" type="V_String" />
+            <Field name="Specialities" size="254" source="File: FileName" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="294" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="zip_code" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="zip_updated" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_zip_code" selected="False" rename="Right_zip_code" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="62" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="62" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="58" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="58" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="True" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="True" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Join" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Left" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>01_Physician Visit Costs_Data Consolidation</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="01fba79a-1e72-4efa-b9d3-aa55334632d0" />
+      <Telemetry>
+        <PreviousWorkflowId value="3557fe13-62c1-408f-a956-e389fc52e0bd" />
+        <OriginWorkflowId value="da548136-3aa0-4448-9411-e1b6aec1fefa" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

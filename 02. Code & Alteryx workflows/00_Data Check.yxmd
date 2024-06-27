@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DAC_NationalDownloadableFile.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="NPI" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Ind_PAC_ID" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Ind_enrl_ID" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Provider Last Name" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Provider First Name" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Provider Middle Name" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="suff" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="gndr" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Cred" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Med_sch" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Grd_yr" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="pri_spec" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="sec_spec_1" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="sec_spec_2" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="sec_spec_3" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="sec_spec_4" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="sec_spec_all" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Telehlth" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Facility Name" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="org_pac_id" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="num_org_mem" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="adr_ln_1" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="adr_ln_2" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="ln_2_sprs" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="City/Town" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="State" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="ZIP Code" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="Telephone Number" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="ind_assgn" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="grp_assgn" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+            <Field name="adrs_id" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\doctors_and_clinicians_12_2023\DAC_NationalDownloadableFile.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="198" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="pri_spec" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="pri_spec" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_pri_spec" selected="False" rename="Right_pri_spec" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Mapping files\Speciality Mapping.xlsx|||`Final Mapping$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Speciality Mapping.xlsx
+Query=`Final Mapping$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pri_spec" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Mapping files\Speciality Mapping.xlsx|||`Final Mapping$`" type="V_String" />
+            <Field name="updated_pri_spec" size="255" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Mapping files\Speciality Mapping.xlsx|||`Final Mapping$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="390" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="NPI" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="NPI" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_NPI" selected="False" rename="Right_NPI" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="270" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="NPI" action="GroupBy" rename="NPI" />
+            <SummarizeField field="Procedure_Category" action="GroupBy" rename="Procedure_Category" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="174" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Utilization.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="NPI" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="Ind_PAC_ID" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="Provider Last Name" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="Provider First Name" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="Provider Middle Name" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="suff" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="Procedure_Category" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="Count" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="Percentile" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+            <Field name="Profile_Display_Indicator" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\DATA CMS GOV\Doctors and Clinicians\doctors_and_clinicians_current_data\Utilization.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="510" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="updated_pri_spec" action="GroupBy" rename="updated_pri_spec" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="774" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Specialities" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="updated_pri_spec" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="630" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Uppercase(Replace([Specialities], &quot;_&quot;, &quot; &quot;))" field="Specialities" size="254" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Specialities = Uppercase(Replace([Specialities], "_", " "))
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="510" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>^</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Physician_visit_costs_Merged.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="zip_code" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="min_medicare_pricing_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="max_medicare_pricing_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="mode_medicare_pricing_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="min_copay_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="max_copay_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="mode_copay_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="most_utilized_procedure_code_for_new_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="min_medicare_pricing_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="max_medicare_pricing_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="mode_medicare_pricing_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="min_copay_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="max_copay_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="mode_copay_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="most_utilized_procedure_code_for_established_patient" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="Specialities" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="City" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+            <Field name="County" size="254" source="File: C:\Users\shubh\OneDrive\Desktop\Data Analytics for Business\04_Sem\Healthcare Analytics\Project\01_Data\02_Processed\Physician_visit_costs_Merged.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="510" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Procedure_Category" action="GroupBy" rename="Procedure_Category" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="294" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="NPI" action="GroupBy" rename="NPI" />
+            <SummarizeField field="pri_spec" action="GroupBy" rename="pri_spec" />
+            <SummarizeField field="updated_pri_spec" action="GroupBy" rename="updated_pri_spec" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1098" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Specialities" action="GroupBy" rename="Specialities" />
+            <SummarizeField field="most_utilized_procedure_code_for_new_patient" action="GroupBy" rename="most_utilized_procedure_code_for_new_patient" />
+            <SummarizeField field="most_utilized_procedure_code_for_established_patient" action="GroupBy" rename="most_utilized_procedure_code_for_established_patient" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="21" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="21" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Join" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Join" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Join" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="18" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="18" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="11" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="11" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Data Blending</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="0ae47af2-bd94-46d6-817a-a48b2b39c47a" />
+      <Telemetry>
+        <PreviousWorkflowId value="96bc4b18-d604-49e1-97b8-4510f0e4cf1a" />
+        <OriginWorkflowId value="96bc4b18-d604-49e1-97b8-4510f0e4cf1a" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
